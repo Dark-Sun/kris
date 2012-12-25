@@ -1,0 +1,34 @@
+<div id="content">
+
+<div class ="advert">
+	<% if current_user %>
+		<%= link_to "Редагувати", edit_advert_path %> <br> <br>
+		<%= button_to('Видалити', advert_path(@advertising), :confirm => 'Are you sure?',
+          :method => "delete", :remote => true, :disable_with => 'loading...') %> <br>
+	<% end %>
+
+	<%= link_to "Адресна програма", '/adverts', :style => 'color:#2429a9' %> <br> <br>
+	<div style="float:left; max-width:300px; word-wrap:break-word;">
+	<h4> <%= @advertising.name %> </h4>
+	<br>
+	Місто: <%= @advertising.city %>
+	<br>
+	Розташування: <%= @advertising.adress %><br>
+	Опис: <%= @advertising.desc %>
+	</div>
+
+	<div class="advert_images">
+		<div style="float:left;">
+			Фото: <br>
+			<%= image_tag(@advertising.image(:normal)) if @advertising.image.present? %>
+		</div>
+	
+	<br>
+		<div style="float:right">
+			Карта: <br>
+			<%= image_tag @advertising.map.url if @advertising.map.present? %>
+		</div>
+	</div>
+</div>
+
+</div>

@@ -1,0 +1,12 @@
+<%= form_for @message, :url => send_email_path do |f| %>
+<br>
+	<%= f.label "Ім’я:" %><br>
+	<%= f.text_field :name %><br><br>
+	<%= f.label "Тема:" %><br>
+	<%= f.text_field :subject %><br><br>
+	<%= f.label "Контакти:" %><br>
+	<%= f.text_area :contacts, :rows => 4, :cols => 30 %><br><br>
+	<%= f.label "Повідомлення:" %><br>
+	<%= f.text_area :body, :rows => 7, :cols => 30 %><br><br>
+	<%= f.submit "Надіслати", :action => :send_email %>
+<% end %>

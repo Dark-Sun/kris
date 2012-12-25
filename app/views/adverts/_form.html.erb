@@ -1,0 +1,32 @@
+<div id="content">
+<div class="form">
+<%= form_for (@advertising), :html => { :multipart => true }  do |f| %>
+
+
+	<p>
+	<%= f.label "Ім’я:" %><br>
+	<%= f.text_field :name %> <br>
+	<%= f.label "Тип:" %><br>
+	<%= f.select :category, options_for_select([['Біл-борд','Біл-борд'],
+		['Сіті-лайт','Сіті-лайт'], 
+		['Касетон','Касетон'], ['Інша реклама','Інша реклама']]) %> <br>
+	<%= f.label "Місто:" %>	<br>
+	<%= f.select :city, options_for_select([['Ужгород','Ужгород'],
+		['Мукачево','Мукачево'], ['Берегово','Берегово'],['Чоп','Чоп'],
+		['Свалява','Свалява'], ['Іршава','Іршава'], ['Нижні ворота','Нижні ворота'],
+		['Інше','Інше']]) %> <br>
+	<%= f.label "Адреса:" %><br>
+	<%= f.text_field :adress %> <br>		
+	<%= f.label "Опис:" %>	<br>
+	<%= f.text_area :desc, :rows => 15 %><br> <br>
+
+	Завантажити карту: <%= f.file_field :map %><br><br>
+	Завантажити фото : <%= f.file_field :image %><br><br>
+	<%= f.submit "Створити/змінити рекламну конструкцію" %>
+	</p>
+
+
+	
+<% end %>
+</div>
+</div>

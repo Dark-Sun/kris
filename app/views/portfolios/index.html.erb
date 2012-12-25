@@ -1,0 +1,16 @@
+<div id="content" style="margin: 0 auto; margin-bottom:0;"> 
+	<%= will_paginate @portfolios %>
+	<% @portfolios.each do |work| %>
+	<div class="work">
+	<%= link_to (image_tag work.image.url(:preview)), work.image.url if work.image %><br>
+
+	<h4> <%= work.name %> </h4>
+	<% if current_user %>
+		<%= link_to "Редагувати", edit_portfolio_path(work),
+			:style => "font-size:14px" %> <br>
+		<%= button_to('Видалити', portfolio_path(work),
+          			:method => "delete", :remote => true) %> 			
+	<% end %>
+	 </div>   
+	<% end %>
+</div>

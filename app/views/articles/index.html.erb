@@ -1,0 +1,23 @@
+<div id="content">
+
+<%= will_paginate @articles %> 
+<% @articles.each do |article| %>
+
+<div class="article">
+<div style="color:#2429a9; font-size:12px; text-align:right">
+	<%= article.created_at.strftime("%d.%m.%Y") %> 
+</div>
+<div style="font-size: 24px; color: #2429a9"><%= article.title %> <br><br> </div>
+<%= article.body.html_safe %>
+<% if current_user %>
+		<div style="font-size:14px;">
+		<%= link_to "Редагувати", edit_article_path(article) %>
+		<%= button_to('Видалити', article_path(article),
+          			:method => "delete", :remote => true) %> 	
+        </div>
+	<% end %>
+</div>
+
+<% end %>
+<%= will_paginate @articles %> 
+</div>

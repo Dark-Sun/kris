@@ -1,0 +1,63 @@
+<div id="content">
+
+<div class="sidebar">
+	Виберіть місто:<br><br>
+	<div style="border: 1px solid grey;padding: 5px;">
+	<ul>
+	<li class=<%= "active" if params[:city] == nil %>> <%= link_to "Всі міста", 
+			 request.parameters.merge({:city => nil}) %> </li>
+	<li class=<%= "active" if params[:city] == "Ужгород" %>> <%= link_to "Ужгород", 
+		     request.parameters.merge({:city => "Ужгород"}) %> </li>
+	<li class=<%= "active" if params[:city] == "Мукачево" %>> <%= link_to "Мукачево", 
+			 request.parameters.merge({:city => "Мукачево"}) %> </li>
+	<li class=<%= "active" if params[:city] == "Берегово" %>> <%= link_to "Берегово", 
+		     request.parameters.merge({:city => "Берегово"}) %> </li>
+	<li class=<%= "active" if params[:city] == "Чоп" %>> <%= link_to "Чоп", 
+		     request.parameters.merge({:city => "Чоп"}) %> </li>
+	<li class=<%= "active" if params[:city] == "Свалява" %>> <%= link_to "Свалява", 
+		     request.parameters.merge({:city => "Свалява"}) %> </li>
+	<li class=<%= "active" if params[:city] == "Іршава" %>> <%= link_to "Іршава", 
+		     request.parameters.merge({:city => "Іршава"}) %> </li>	  
+	<li class=<%= "active" if params[:city] == "Нижні ворота" %>> <%= link_to "Нижні ворота", 
+		     request.parameters.merge({:city => "Нижні ворота"}) %> </li>   
+	<li class=<%= "active" if params[:city] == "Інше" %>> <%= link_to "Інше", 
+		     request.parameters.merge({:city => "Інше"}) %> </li>     
+	</ul>
+	</div>
+	<br>
+	Виберіть тип:<br><br>
+	<div style="border: 1px solid grey;padding: 5px;">
+	<ul>
+	<li class=<%= "active" if params[:category] == nil %>> <%= link_to "Всі типи", 
+			 request.parameters.merge({:category => nil}) %> </li>
+	<li class=<%= "active" if params[:category] == "Біл-борд" %>> <%= link_to "Біл-борди", 
+			 request.parameters.merge({:category => "Біл-борд"}) %> </li>
+	<li class=<%= "active" if params[:category] == "Сіті-лайт" %>> <%= link_to "Сіті-лайти", 
+			 request.parameters.merge({:category => "Сіті-лайт"})%> </li>
+	<li class=<%= "active" if params[:category] == "Касетон" %>> <%= link_to "Касетони", 
+			 request.parameters.merge({:category => "Касетон"})%> </li>
+	<li class=<%= "active" if params[:category] == "Інша реклама" %>> <%= link_to "Інше", 
+			 request.parameters.merge({:category => "Інша реклама"})%> </li>		
+	</ul>
+	</div>
+</div>
+
+<div class="bill_board_list">
+
+<%= will_paginate @advertisings %>
+
+<% @advertisings.each do |advert| %>
+	<div style="width:600px; pargin">
+		<h2> <%= link_to advert.name, advert %> <%= advert.city %>, <%= advert.adress %></h2>
+	
+		<div id="bill_board_list_image">
+			<%= image_tag advert.image.url(:normal)  if advert.image.present? %>
+		</div>
+		<br>
+	</div>
+<% end %> 
+<%= will_paginate @advertisings %>
+
+</div>
+
+</div>

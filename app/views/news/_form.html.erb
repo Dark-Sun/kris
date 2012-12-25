@@ -1,0 +1,15 @@
+<%= include_nicedit_assets %>
+<div id="content">
+<%= form_for @new do |f| %>
+	<%= f.label "Назва:" %> <br>
+	<%= f.text_field :title %><br><br>
+
+	<script type="text/javascript">
+       bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	</script>
+	<div style="font-size:14px; font-family: Arial">
+	<%= f.rich_text_area :body, :cols => 100 %>
+	<%= f.submit "Створити/редагувати новину" %><br>
+	</div>
+<% end %>
+</div>

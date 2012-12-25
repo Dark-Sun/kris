@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  map_path: MyString
+  desc: MyText
+  category: MyString
+  adress: MyString
+  city: MyString
+
+two:
+  name: MyString
+  map_path: MyString
+  desc: MyText
+  category: MyString
+  adress: MyString
+  city: MyString

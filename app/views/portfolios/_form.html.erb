@@ -1,0 +1,12 @@
+<div id="content">
+<%= form_for (@work), :html => { :multipart => true }  do |f| %>
+
+	<p>
+		<%= f.label "Ім’я" %> <br>
+		<%= f.text_field :name %><br>
+		Зображення: <%= f.file_field :image %>
+		<%= f.submit "Додати/редагувати роботу" %>
+	</p>
+
+<% end %>
+</div>

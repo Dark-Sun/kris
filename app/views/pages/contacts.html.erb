@@ -1,0 +1,31 @@
+<script src="http://api-maps.yandex.ru/1.1/index.xml?key=AF742VABAAAAh1uiEgIAPdyiR8kQIvORM4ZXin8RMenZc-MAAAAAAAAAAAAIM4JyUfbTCvLOYz0RR8y5IP_k_Q=="
+	type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var map = new YMaps.Map(document.getElementById("YMapsID"));
+            map.setCenter(new YMaps.GeoPoint(22.723779,48.436689), 17);
+            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(22.723779,48.436689), {style: "default#darkbluePoint", hideIcon: false});
+            placemark.description = "Столица Российской Федерации";
+            map.addOverlay(placemark);
+        }
+    </script>
+
+    <div id="YMapsID" style="width:960px;height:350px"></div>
+
+<div id="content" style="height:500px">
+    <div style="width:360px; float:left; font-size: 16px; text-align:right; padding-right:30px">
+        <h2 style="font-size:18px"> Адреса</h2> <br>
+        89600, Україна <br>
+Закарпатська обл., м. Мукачево,<br>
+вул. Горького, 28/2 <br>
+тел. факс: +38 (03131) 2-13-97 <br>    
+тел. мобіл.: +38 050 372 51 55 <br>
+<a href="mailto:kris@ra-kris.com" style="color:black;">e-mail: kris@ra-kris.com</a><br><br>
+<%= image_tag "ofis_a.gif", :style => "border: 1px solid #2429a9" %>
+
+    </div>
+    <div style="width:360px; float:right; font-size:16px; padding-left:30px">
+        <h2 style="font-size:18px">Напишіть нам</h2>
+            <%= render 'email_form' %>
+    </div>
+</div>

@@ -1,0 +1,118 @@
+<div id="carousel">
+		<div class="slide">
+			<%= image_tag "c1.jpg", :width => 870, :height => 400 %>
+			<div>
+				<h4>Біл-борди</h4>
+				<p>Рекламний щит євростандарту <br>(розмір 3х6 м.) <br>	
+					Вигідне розташування на основних <br>магістралях, в центральнтх частинах міста.<br>
+					<a href="/adverts?category=Біл-борд">Адресна програма</a> <br>
+					<a href="/services#bill-boards">Читати далі</a></p>	<br>
+			</div>
+		</div>
+		<div class="slide">
+			<%= image_tag "c2.jpg", :width => 870, :height => 400 %>
+			<div>
+				<h4>Поліграфія</h4>
+				<p> Візитки, календарі, буклети, флаєра, <br>
+					друк на конвертах, фірмові бланки<br>	
+					<br>
+				</p>
+			</div>
+		</div>
+		<div class="slide">
+			<%= image_tag "c3.jpg", :width => 870, :height => 400 %>
+			<div>
+				<h4>Призматрони</h4>
+				<p>Динамічна конструкція європейського <br>
+					зразка, яка дозволяє розмістити на <br>
+					одній площині три зображення, <br>
+					які в нічний час підсвічуються. <br>	
+					
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="buttons">
+		<span id="prevbtn"> <%= image_tag("prevbtn.png") %> </span>
+		<span id="nextbtn">	<%= image_tag("nextbtn.png") %> </span>
+	</div>
+
+<div id="content">
+
+		<div id="about">
+			<div style="font:normal 18px scadabold; text-align: center; width: 246px"> Вітаємо на сайті РА КРІС </div>
+			<p>
+			<br>
+			РА «КРІС» працює у сфері зовнішньої реклами на ринку Закарпатської
+області з 2001 р. Зовнішня реклама є пріоритетним видом діяльності нашого
+агентства. На сьогодні, ми володіємо власною мережею рекламоносіїв розміром
+3х6 м. (формат білборд, призматрон, бек-лайт) і розміром 1,2х1,8 м. (формат
+сіті-лайт) по всій Закарпатській області (більше 200 площин).
+			<div class="button"> <a href="/about">Дізнатись більше</a></div>
+		</div>
+
+		<div id="services">
+			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Послуги", "/services", :class => "categorylink" %> </div>
+			<p>
+			<br>
+			Пропонуємо Вам розглянути наступні пропозиції по розміщенню
+			Вашої реклами: <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Білборди <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Сіті-лайти <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Бек-лайти <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Брандмауери <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Розтяжки <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Касетони <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Візитівки <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Календарі <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Буклети <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> Флаєра <br>
+			<div class="button"> <a href="/services">Детільніше</a></div>
+		</div>
+
+		<div id="news">
+			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> Новини </div>
+			<br>
+			<% @articles.each do |article| %>
+				<div style="font-size:18px"> <%= link_to article.title, article %> </div>
+				<div style="font-size:14px; color:black">
+					<%= sanitize article.body %> ...
+					<br> <%= link_to "Читати далі", article, :style => "text-align:right; color: #2429a9" %>
+				</div><br>
+			<% end %>
+		</div>
+
+		<div style="margin-top: 290px;">
+		<div id="adresses">
+			<br>
+			<div style="font-size: 18px; font-family: scadabold, Helvetica; text-align: center; width: 246px; color:black"> <%= link_to "Адресні програми", '/adverts', :class => 'categorylink' %> </div>
+		<%= link_to image_tag("billboard.png"), "/adverts?category=Біл-борд" %>
+		<%= link_to image_tag("citylight.png"), "/adverts?category=Сіті-лайт" %>
+
+		<div class="adress_caption">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a href="/adverts?category=Біл-борд" >Біл-борди</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;			<a href="/adverts?category=Сіті-лайт">Сіті-лайти</a>
+		</div>
+		</div>
+
+		
+
+		<div id="portfolio">
+			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Наші роботи", "/portfolios", 
+			:class => "categorylink" %>
+			</div>
+			<div style="margin-left:15px; text-align:center">
+				<br>
+			<%= link_to (image_tag @works[0].image.url(:thumb)), @works[0].image.url %>  
+			<%= link_to (image_tag @works[1].image.url(:thumb)), @works[1].image.url %>  
+			<br>
+			<div style="margin-left:-5px">
+			<%= link_to (image_tag @works[2].image.url(:thumb)), @works[2].image.url %>  
+			<%= link_to (image_tag @works[3].image.url(:thumb)), @works[3].image.url %>  
+			</div>
+			</div>
+		</div>
+
+		</div>
+
+	</div>

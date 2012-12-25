@@ -1,0 +1,18 @@
+<div id="content">
+
+<% @news.each do |article| %>
+
+<div class="article">
+<%= article.title %> <br>
+<%= article.body.html_safe %>
+<% if current_user %>
+		<div style="font-size:14px;">
+		<%= link_to "Редагувати", edit_news_path(article) %>
+		<%= button_to('Видалити', news_path,
+          			:method => "delete", :remote => true) %> 	
+        </div>
+	<% end %>
+</div>
+
+<% end %>
+</div>
