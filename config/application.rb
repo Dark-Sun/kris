@@ -74,5 +74,7 @@ module Kris
     config.action_mailer.default_url_options = {
         :host => "ra-kris.com"
     }
+
+    config.assets.precompile += ['stylesheet.css']
   end
 end
