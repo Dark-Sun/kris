@@ -7,7 +7,7 @@ class Advert < ActiveRecord::Base
 
   has_attached_file :image, :styles => {:normal => '350x265', :small => '250x250'},
   					:url => "/assets/:id/:style/:basename.:extension",
-  					:path => ":rails_root/app/assets/images/:id/:style/:basename.:extension"
+  					:path => ":rails_root/app/assets/images/:style/:basename.:extension"
 
   validates :name, 	:length => {:in => 2..20}, :presence => true
   validates :category, 						   :presence => true
