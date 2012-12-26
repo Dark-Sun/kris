@@ -71,7 +71,7 @@
 		</div>
 
 		<div id="news">
-			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Новини", 'articles_path' %> </div>
+			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Новини", articles_path %> </div>
 			<br>
 			<% @articles.each do |article| %>
 				<div style="font-size:18px"> <%= link_to article.title, article %> </div>
