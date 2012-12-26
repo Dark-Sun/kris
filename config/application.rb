@@ -76,7 +76,7 @@ module Kris
     }
 
     config.assets.precompile += ['stylesheet.css']
-     config.assets.compile = true
+    config.assets.precompile += %w( jquery.js carouFredSel.js carousel.js inji_inversion_menu.js nicEdit.js)
     config.consider_all_requests_local = true
   end
 end
