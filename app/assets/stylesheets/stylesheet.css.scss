@@ -577,3 +577,20 @@ h3 {
 .text img {
 	float: center;
 }
+
+.flash-error {
+	font-family: Helvetica;
+	font-size: 14px;
+	background-color: #fdf9b3;
+	border: 1px solid #f6ed5d;
+}
+
+.flash-notice {
+	font-family: Helvetica;
+	font-size: 14px;
+	background-color: #fdf9b3;
+	border: 2px solid #f6ed5d;
+	margin: 10px auto;
+	padding: 5px;
+	color: #4b4a3d;
+}
