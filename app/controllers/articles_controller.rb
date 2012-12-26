@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 	before_filter :current_user, :except => [:index, :show]
 
 	def index
-		@articles = Article.paginate(:page => params[:page], :per_page => 3)
+		@articles = Article.paginate(:page => params[:page], :per_page => 3, :order => 'created_at DESC')
 	end
 
 	def show
