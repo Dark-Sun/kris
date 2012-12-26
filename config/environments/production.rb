@@ -62,6 +62,10 @@ Kris::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+
+config.assets.precompile += ['stylesheet.css']
+    config.assets.precompile += %w( jquery.js carouFredSel.js carousel.js inji_inversion_menu.js nicEdit.js)
+    config.consider_all_requests_local = true
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
