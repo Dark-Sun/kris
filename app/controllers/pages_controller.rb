@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 	
 	def main
 		@works = Portfolio.find(:all, :order => "id desc", :limit => 5).reverse
-		@articles = Article.find(:all, :order => "id desc", :limit => 3).reverse
+		@articles = Article.find(:all, :order => "id desc", :limit => 3)
 		@articles.each do |article|
 			article.body = article.body[0,170]
 		end
