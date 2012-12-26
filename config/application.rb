@@ -75,8 +75,6 @@ module Kris
         :host => "ra-kris.com"
     }
 
-    config.assets.precompile += ['stylesheet.css']
-    config.assets.precompile += %w( jquery.js carouFredSel.js carousel.js inji_inversion_menu.js nicEdit.js)
-    config.consider_all_requests_local = true
+    
   end
 end
