@@ -76,6 +76,7 @@ module Kris
     }
 
     config.assets.precompile += ['stylesheet.css']
+     config.assets.compile = true
     config.consider_all_requests_local = true
   end
 end
