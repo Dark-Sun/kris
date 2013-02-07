@@ -1,8 +1,12 @@
 # -*- encoding : utf-8 -*-
 Kris::Application.routes.draw do
 
+
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
+
+  get "login" => "sessions#new", :as => "log_in"
+  get "logout" => "sessions#destroy", :as => "log_out"
 
   root :to => 'pages#main'
 
