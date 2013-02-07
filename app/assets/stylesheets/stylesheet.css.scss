@@ -158,6 +158,14 @@ h3 {
 	color: #2429a9;
 }
 
+#services a {
+	text-decoration: none;
+}
+
+#services a:hover {
+	text-decoration: underline;
+}
+
 #news {
 	float: right;
 	width: 240px;
@@ -219,6 +227,19 @@ h3 {
 	padding: 0 10px;
 	font-variant: normal;
 }
+
+/* хак для оперы */
+
+noindex:-o-prefocus,#portfolio {
+	margin-left: 0px;
+	margin-top: 26px;
+}
+
+/* хак для хрома */
+body:nth-of-type(1) #port1{
+	padding-left: -5px;
+}
+
 #footer {
 	height: 100px;
 	background-color: #2429a9;
@@ -261,11 +282,17 @@ h3 {
 	font-size: 14px;
 	float: right;
 	height: 40px;
-	width: 395px;
+	work-break: break-all;
+	max-width: 400px;
+	min-width:200px;
 	border: 5px solid #d3d3d3;
 	color: #acacac;
 	font-family: scadaregular, Helvetica;
+	text-align:center;
+	padding: 0 10px;
 }
+
+
 
 #phone {
 	padding-top: 5px;
@@ -507,28 +534,6 @@ h3 {
     _:-o-prefocus, #adresses { /* стиль только для Opera 12.00+ */
         position: absolute;
         margin-top: 5px;
-    };
-}
-
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, #clients { /* стиль только для Opera 12.00+ */
-        position: absolute;
-        margin-top: 25px;
-        left: 470px;
-    };
-}
-
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
-        position: absolute;
-        margin-top: 25px;
-        left: 470px;
-    };
-}
-
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, .quote { /* стиль только для Opera 12.00+ */
-        padding-top: -25px;
     };
 }
 

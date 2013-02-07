@@ -36,6 +36,7 @@
 		<span id="prevbtn"> <%= image_tag("prevbtn.png") %> </span>
 		<span id="nextbtn">	<%= image_tag("nextbtn.png") %> </span>
 	</div>
+<div class="separator"> </div>
 
 <div id="content">
 
@@ -48,26 +49,32 @@
 агентства. На сьогодні, ми володіємо власною мережею рекламоносіїв розміром
 3х6 м. (формат білборд, призматрон, бек-лайт) і розміром 1,2х1,8 м. (формат
 сіті-лайт) по всій Закарпатській області (більше 200 площин).
-			<div class="button"> <a href="/about">Дізнатись більше</a></div>
 		</div>
 
 		<div id="services">
-			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Послуги", "/services", :class => "categorylink" %> </div>
+			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black;"> <%= link_to "Послуги", "/services", :class => "categorylink" %> </div>
 			<p>
 			<br>
 			Пропонуємо Вам розглянути наступні пропозиції по розміщенню
 			Вашої реклами: <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Білборди <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Сіті-лайти <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Бек-лайти <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Брандмауери <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Розтяжки <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Касетони <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Візитівки <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Календарі <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Буклети <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> Флаєра <br>
-			<div class="button"> <a href="/services">Детільніше</a></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Білборди", "services/#bill-boards",
+										:style => "color:#2429a9;" %><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Сіті-лайти", "services/#citylight",
+										:style => "color:#2429a9;" %><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Бек-лайти", "services/#back-light",
+										:style => "color:#2429a9;" %><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Брандмауери", "services/#brandmauer" ,
+										:style => "color:#2429a9;"%> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Розтяжки", "services/#rost",
+										:style => "color:#2429a9;"  %><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Візитки", "services/#vis",
+										:style => "color:#2429a9;" %> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Календарі", "services/#cal",
+										:style => "color:#2429a9;" %> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Буклети", "services/#buk",
+										:style => "color:#2429a9;" %> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Флаєра",  "services/#fla",
+										:style => "color:#2429a9;" %> <br>
 		</div>
 
 		<div id="news">
@@ -101,12 +108,12 @@
 			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Наші роботи", "/portfolios", 
 			:class => "categorylink" %>
 			</div>
-			<div style="margin-left:15px; text-align:center">
+			<div style="float:center; text-align:center">
 				<br>
 			<%= link_to (image_tag @works[0].image.url(:thumb)), @works[0].image.url %>  
 			<%= link_to (image_tag @works[1].image.url(:thumb)), @works[1].image.url %>  
-			<br>
-			<div style="margin-left:-5px">
+			
+			<div style="float:center; text-align:center; padding-top: 5px;">
 			<%= link_to (image_tag @works[2].image.url(:thumb)), @works[2].image.url %>  
 			<%= link_to (image_tag @works[3].image.url(:thumb)), @works[3].image.url %>  
 			</div>

@@ -42,7 +42,7 @@
                 	params[:controller] == 'adverts' %>"><a href="/services">Послуги</a></li>
                 <li class="<%= "active" if params[:controller] == 'portfolios'%>"><a href="/portfolios">Портфоліо</a></li>
                 <li class="<%= "active" if params[:action] == 'about' %>"> <a href="/about">Про нас</a></li>
-                <li class="<%= "active" if params[:action] == 'contacts' %>"><a href="/contacts">Контаки</a></li>
+                <li class="<%= "active" if params[:action] == 'contacts' %>"><a href="/contacts">Контакти</a></li>
                  <li><a href="#"></a></li>
             </ul>
         </div>
@@ -73,9 +73,9 @@
 
 		<div id="contacts">
 			<div id="quote">
-				<div class="quote" style="font-size:130px; margin-top:-20px; color: #cecece"> &rdquo; </div>
-				<div style="margin-top:<%= @margin %>px; margin-left: 50px;"> 
-					<%= @quote %> 
+				
+				<div style="margin-top:<%= @margin %>px; margin-left: 0px;"> 
+					<div style="margin-top:130px"><%= @quote %></div> 
 				</div>
 			</div>
 			<div id="phone">
