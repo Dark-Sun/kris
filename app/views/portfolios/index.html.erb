@@ -4,7 +4,7 @@
 	<div class="work">
 	<%= link_to (image_tag work.image.url(:preview)), work.image.url if work.image %><br>
 
-	<h4> <%= work.name %> </h4>
+	<h5 style="margin-top:3px"> <%= work.name %> </h5>
 	<% if current_user %>
 		<%= link_to "Редагувати", edit_portfolio_path(work),
 			:style => "font-size:14px" %> <br>
