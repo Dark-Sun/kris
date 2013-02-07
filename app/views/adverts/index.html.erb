@@ -51,7 +51,7 @@
 		<h2> <%= link_to advert.name, advert %> <%= advert.city %>, <%= advert.adress %></h2>
 	
 		<div id="bill_board_list_image">
-			<%= image_tag advert.image.url(:normal)  if advert.image.present? %>
+			<%= image_tag advert.image.url(:original)  if advert.image.present? %>
 		</div>
 		<br>
 	</div>

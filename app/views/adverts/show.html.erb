@@ -20,13 +20,13 @@
 	<div class="advert_images">
 		<div style="float:left;">
 			Фото: <br>
-			<%= image_tag(@advertising.image(:normal)) if @advertising.image.present? %>
+			<%= image_tag(@advertising.image(:original)) if @advertising.image.present? %>
 		</div>
 	
 	<br>
 		<div style="float:right">
 			Карта: <br>
-			<%= image_tag @advertising.map.url if @advertising.map.present? %>
+			<%= image_tag @advertising.map.url(:oroginal) if @advertising.map.present? %>
 		</div>
 	</div>
 </div>
