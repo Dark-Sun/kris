@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121224175017) do
+ActiveRecord::Schema.define(:version => 20130208001827) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(:version => 20121224175017) do
     t.datetime "updated_at",      :null => false
     t.string   "hashed_password"
     t.string   "salt"
+  end
+
+  create_table "advert_maps", :force => true do |t|
+    t.integer "advert_id"
+    t.string  "style"
+    t.binary  "file_contents"
   end
 
   create_table "adverts", :force => true do |t|
@@ -73,6 +79,12 @@ ActiveRecord::Schema.define(:version => 20121224175017) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "user_images", :force => true do |t|
+    t.integer "user_id"
+    t.string  "style"
+    t.binary  "file_contents"
   end
 
   create_table "users", :force => true do |t|

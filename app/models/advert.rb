@@ -1,11 +1,15 @@
 # -*- encoding : utf-8 -*-
 class Advert < ActiveRecord::Base
   attr_accessible :adress, :category, :city, :desc, :map_path, :name, :image_path, :map, :image
-  has_attached_file :map, :styles => {:original => '350x265'},
-  					:url => "/assets/:id/:style/:basename.:extension",
-  					:path => ":rails_root/app/assets/images/:id/:style/:basename.:extension"
+  has_attached_file :map, 
+                    :storage => :database,
+                    :styles => {:original => '350x265'},
+  					         :url => "/assets/:id/:style/:basename.:extension",
+  					       :path => ":rails_root/app/assets/images/:id/:style/:basename.:extension"
 
-  has_attached_file :image, :styles => {:original => '350x265'},
+  has_attached_file :image, 
+            :storage => :database,
+            :styles => {:original => '350x265'},
   					:url => "/assets/:style/:basename.:extension",
   					:path => ":rails_root/app/assets/images/:style/:basename.:extension"
 
