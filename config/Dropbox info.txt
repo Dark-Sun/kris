@@ -1,0 +1,5 @@
+Dropbox info:
+
+	access_token: dytsbwqcqcf7fj4
+	access_token_secret: rjabsl1r8rdoib2
+	user_id: 7346658

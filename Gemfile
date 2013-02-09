@@ -9,7 +9,7 @@ gem 'rails', '3.2.8'
 gem 'will_paginate'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem "paperclip"
-gem "paperclip_database", "~> 1.0"
+gem "paperclip-dropbox"
 
 
 # Gems used only for assets and not required
