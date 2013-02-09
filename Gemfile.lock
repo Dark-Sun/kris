@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/england/wake_up_neo.git
+  revision: 757e8ab097b076843e5a533acee69e42ce2d4e6c
+  specs:
+    wake_up_neo (0.0.1)
+      rails (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,4 +135,5 @@ DEPENDENCIES
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  wake_up_neo!
   will_paginate
