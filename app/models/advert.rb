@@ -2,7 +2,7 @@
 class Advert < ActiveRecord::Base
   attr_accessible :adress, :category, :city, :desc, :map_path, :name, :image_path, :map, :image
   has_attached_file :map, 
-                    :styles => {:original => '350x265'}#,
+                    :styles => {:original => '350x265'},
   					        :url => "/assets/:id/:style/:basename.:extension",
   					        :path => ":rails_root/app/assets/images/:id/:style/:basename.:extension"
 
