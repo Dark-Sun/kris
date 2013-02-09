@@ -7,7 +7,6 @@ class Advert < ActiveRecord::Base
   					        :path => ":rails_root/app/assets/images/:id/:style/:basename.:extension"
 
   has_attached_file :image, 
-            :storage => :database,
             :styles => {:original => '350x265'},
   					:url => "/assets/:style/:basename.:extension",
   					:path => ":rails_root/app/assets/images/:style/:basename.:extension"
