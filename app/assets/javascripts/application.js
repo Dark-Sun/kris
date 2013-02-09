@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+f($this->ie6($_SERVER['HTTP_USER_AGENT'])):
+    header("Location: http://download.xtim.ru/browsers/ie6.html");
+    exit();
+endif;

@@ -80,12 +80,14 @@
 		<div id="news">
 			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Новини", articles_path %> </div>
 			<br>
+			<% if @articles %>
 			<% @articles.each do |article| %>
 				<div style="font-size:18px"> <%= link_to article.title, article %> </div>
 				<div style="font-size:14px; color:black">
 					<%= sanitize article.body %> ...
 					<br> <%= link_to "Читати далі", article, :style => "text-align:right; color: #2429a9" %>
 				</div><br>
+			<% end %>
 			<% end %>
 		</div>
 
@@ -107,19 +109,16 @@
 		<div id="portfolio">
 			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Наші роботи", "/portfolios", 
 			:class => "categorylink" %>
-			</div>
-			<% if @works[3].image.url %>
 			<div style="float:center; text-align:center">
 				<br>
-			<%= link_to (image_tag (@works[0].image.url(:thumb), @works[0].image.url)) %>  
-			<%= link_to (image_tag (@works[1].image.url(:thumb), @works[1].image.url)) %>  
+			<%= link_to (image_tag @works[0].image.url(:thumb)), @works[0].image.url if @works[0] %>  
+			<%= link_to (image_tag @works[1].image.url(:thumb)), @works[1].image.url if @works[1] %>  
 			
 			<div style="float:center; text-align:center; padding-top: 5px;">
-			<%= link_to (image_tag (@works[2].image.url(:thumb), @works[2].image.url)) %>  
-			<%= link_to (image_tag (@works[3].image.url(:thumb), @works[3].image.url)) %>  
+			<%= link_to (image_tag @works[2].image.url(:thumb)), @works[2].image.url if @works[2] %>  
+			<%= link_to (image_tag @works[3].image.url(:thumb)), @works[3].image.url if @works[3] %>  
 			</div>
 			</div>
-			<% end %>
 		</div>
 
 		</div>
