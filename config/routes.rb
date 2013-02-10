@@ -18,4 +18,6 @@ Kris::Application.routes.draw do
   get "services" => "pages#services", :as => "services"
 
   match "send_email" => "pages#send_email", :as => "send_email"
+
+  get "index.php" => 'pages#main'
 end
