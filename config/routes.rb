@@ -19,5 +19,5 @@ Kris::Application.routes.draw do
 
   match "send_email" => "pages#send_email", :as => "send_email"
 
-  get "index.php" => 'pages#main'
+  get "index.php" => redirect("www.ra-kris.com")
 end
