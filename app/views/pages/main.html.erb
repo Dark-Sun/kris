@@ -109,7 +109,7 @@
 		<div id="portfolio">
 			<div style="font:normal 18px scadabold; text-align: center; width: 246px; color:black"> <%= link_to "Наші роботи", "/portfolios", 
 			:class => "categorylink" %>
-			<div style="float:center; text-align:center; margin-top: 3px">
+			<div style="float:center; text-align:center; margin-top: 6px">
 
 			<%= link_to (image_tag @works[0].image.url(:thumb)), @works[0].image.url if @works[0] %>  
 			<%= link_to (image_tag @works[1].image.url(:thumb)), @works[1].image.url if @works[1] %>  
