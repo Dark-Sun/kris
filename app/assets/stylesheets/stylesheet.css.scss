@@ -233,7 +233,7 @@ h3 {
 noindex:-o-prefocus,#portfolio {
 	margin-left: 260px; 
 /*	margin-top: 26px;*/
-	left: 210;
+	left: 0px;
 	float: left;
 }
 /* opera 12 only */
@@ -241,7 +241,6 @@ noindex:-o-prefocus,#portfolio {
     _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
         margin-left: 0px;
         margin-top: 20px;
-       	float: left;
 
     };
 }
