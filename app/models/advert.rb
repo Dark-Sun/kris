@@ -22,7 +22,7 @@ has_attached_file :map,
 has_attached_file :image,
                   :storage => :dropbox,
                   :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
-                  :styles => {:original => '350x265'},
+                  :styles => {:original => '350x350'},
                   :dropbox_options => {
                         :path => proc { |style| "#{style}/#{id}_#{image.original_filename}" }
                    }
