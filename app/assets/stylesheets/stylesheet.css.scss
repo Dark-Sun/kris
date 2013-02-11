@@ -231,8 +231,20 @@ h3 {
 /* хак для оперы */
 
 noindex:-o-prefocus,#portfolio {
-	margin-left: 0px;
-	margin-top: 26px;
+	margin-left: 260px; 
+/*	margin-top: 26px;*/
+}
+/* opera 12 only */
+@media (min-resolution: .001dpcm) {
+    _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
+        margin-left: 0px;
+        margin-top: 20px;
+    };
+}
+
+/* opera 11
+@media not screen and (1) {
+	#portfolio {margin-left: 260px;}
 }
 
 /* хак для хрома */
