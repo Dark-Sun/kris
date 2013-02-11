@@ -3,6 +3,10 @@
 1620/original/u103.jpeg: 1620/original/u103-4ec84316e13e5cfc1d53fe2b4e038ca9.jpeg
 1620/original/umape103.jpeg: 1620/original/umape103-d8137e36058256025eb360ce7c43e1ef.jpeg
 1620/small/u103.jpeg: 1620/small/u103-e9231fd4a86cfde7b8127e13fe347b0d.jpeg
+1820/original/sJD6FJrWbjM.jpg: 1820/original/sJD6FJrWbjM-d8c26885b0c4cb98bb726a64f8b46e4b.jpg
+1821/normal/sJD6FJrWbjM.jpg: 1821/normal/sJD6FJrWbjM-2cba72d485b1c010bcd37af7f2ef40eb.jpg
+1821/original/sJD6FJrWbjM.jpg: 1821/original/sJD6FJrWbjM-d8c26885b0c4cb98bb726a64f8b46e4b.jpg
+1821/small/sJD6FJrWbjM.jpg: 1821/small/sJD6FJrWbjM-ee1b7d4f3540320717e626fc887ef907.jpg
 38/original/print_siti04.jpeg: 38/original/print_siti04-9867b509af822ccb60d58676cc34a8c8.jpeg
 38/preview/print_siti04.jpeg: 38/preview/print_siti04-8c865572c92e8b3ac57aed68c16951c8.jpeg
 38/thumb/print_siti04.jpeg: 38/thumb/print_siti04-b4c307559b990374692abf5465767c2a.jpeg
@@ -34,6 +38,7 @@ c3.jpg: c3-180174b600831a55b6b4db07ba7d57ea.jpg
 city_z.gif: city_z-72378ea54bd2efadfb791ff31c22f842.gif
 citylight.png: citylight-d65d782f8033ec297e78013a95b542ea.png
 ira.jpeg: ira-14089f9248637132da9223a30a0a1143.jpeg
+ira1.jpg: ira1-b4b73bd173fa711849946fecb949ac62.jpg
 kos1.gif: kos1-61c95d3d0c86d7c19bf0c52e45696383.gif
 logo.gif: logo-f18b13ab0ef903ac53ff9fde3bfeffed.gif
 logo.png: logo-e8e0133cce24ce579a47b8fedfba0dee.png
@@ -41,7 +46,9 @@ mail.gif: mail-ba6736944c99513131df4e3740ba7da1.gif
 mail.png: mail-3479c9cd9ffe39ea4f291c52fe502fae.png
 nextbtn.png: nextbtn-7e4422290c7771d50b802365144e09bc.png
 nicEditorIcons.gif: nicEditorIcons-bb8801b1492209977db71c8812730050.gif
+normal/avatar.jpg: normal/avatar-16042be04c9be2090da2f2b31fdcfcb0.jpg
 ofis_a.gif: ofis_a-a191bb38cd624dbe414336a2ee55369f.gif
+original/avatar.jpg: original/avatar-c1a878bf2e04be74eb3323061e7d7730.jpg
 petro.jpeg: petro-1e44cf26a2fea99305e069f926f5acff.jpeg
 phone copy.gif: phone copy-8bd407a15cd2ace9a0b14734c7699f9e.gif
 phone.gif: phone-d31d99edaafa98905f00d88b2c27d673.gif
@@ -60,11 +67,13 @@ scada-regular-webfont.eot: scada-regular-webfont-652160e098b98a4e2398fee2a273031
 scada-regular-webfont.svg: scada-regular-webfont-c054195b85b02bc274323e1a15992f20.svg
 scada-regular-webfont.ttf: scada-regular-webfont-b0d7da4a81af49c3d2d85f76c3e3041a.ttf
 scada-regular-webfont.woff: scada-regular-webfont-7aff46ffcbbb275885720123f6b87e2f.woff
+small/avatar.jpg: small/avatar-ddd8213eb47d1576aecc277f1c470c21.jpg
 sveta.jpeg: sveta-98844358dcbc9a463cbb031dbcc698ec.jpeg
 tanatan.jpeg: tanatan-24e2768b0104429c20ebad655e7e0f83.jpeg
 tanya.jpeg: tanya-ae49de5eefcbec06ee49d09f3836a641.jpeg
 troli1.gif: troli1-cfc2cc6eb2083f2e98b46e7fbe2e3b17.gif
 up_arrow.png: up_arrow-77e028690fc3f87d096c5823a215686d.png
+valeria.jpg: valeria-34a905f299a4980444f181d90dfc6e4f.jpg
 victoria.jpeg: victoria-9aacce680a831715969362d9a1f26060.jpeg
 work1.jpg: work1-4369576d35bd07ff42c134f773577800.jpg
 work2.jpg: work2-da87eebe6f460a4625ec6035ebeb5f8e.jpg
@@ -75,5 +84,5 @@ carousel.js: carousel-64de421b4c969586d90efa81f985bf28.js
 inji_inversion_menu.js: inji_inversion_menu-17961c3b446fa1d6a8d57f096b3ed224.js
 jquery.js: jquery-fcfb9d96f1fd25bd554d91f850a9e172.js
 nicEdit.js: nicEdit-f1b2cb529916f23f34e0a3256b3e7142.js
-application.css: application-85657130340648c77cefc244a3068122.css
-stylesheet.css: stylesheet-858e370046d3e00da467366816fbaf91.css
+application.css: application-8886a58b0c57a04b6d366f235bcee672.css
+stylesheet.css: stylesheet-34b5eecc2d7dcb13717c31adc295262f.css
