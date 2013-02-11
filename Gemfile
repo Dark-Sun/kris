@@ -11,7 +11,7 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem "paperclip"
 gem "paperclip-dropbox"
 gem 'wake_up_neo', git: 'https://github.com/england/wake_up_neo.git'
-
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.

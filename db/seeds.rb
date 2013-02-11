@@ -1,39 +1,49 @@
 # -*- encoding : utf-8 -*-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Advert.destroy_all
+require 'nokogiri'
+require 'open-uri'
 
 
-100.times do |n|
-	adv = Advert.new
-	adv.name = "Біл-борд N #{n}"
-	adv.city = "Мукачево"
-	adv.adress = "Недецеї 17/7, сторона А"
-	adv.desc  = "Трафік 100500 людей на день, 30000 машин. Вигідне розташування в центрі міста"
-	adv.image_path = "u103.jpeg"
-	adv.map_path = "umape103.jpeg"
-	adv.category = "Біл-борд"
-	adv.save
+def load_image(prefix, n)
+	file = File.join(Rails.root.to_s + '/app/assets/images/old', "#{prefix}#{n+1}" + ".jpg")
+	io = File.new(file)
+	io
 end
 
+def get_adress(path)
+	doc = Nokogiri::HTML(open(path))
+	adress = ""
+	n = 0
+	doc.css('h3').each do |text|
+		if n == 1
+			adress += text
+			break
+		end
+		n+=1
+	end
+	adress
+end
 
-100.times do |n|
+def get_desc(path)
+	doc = Nokogiri::HTML(open(path))
+	desc = ""
+	doc.css('p font').each do |text|
+		desc += text
+		desc.slice! "Розташування на мапі:"
+		break
+	end
+	desc
+end
+
+114.times do |n|
 	adv = Advert.new
-	adv.name = "Біл-борд N #{n}"
+	adv.name = "Щит N #{n+1}"
 	adv.city = "Ужгород"
-	adv.adress = "Недецеї 17/7, сторона А"
-	adv.desc  = "Трафік 100500 людей на день, 30000 машин. Вигідне розташування в центрі міста"
+	adv.adress = get_adress(Rails.root.to_s + "/app/assets/images/old/u#{n+1}.html")
+	adv.adress.slice!("Щит №#{n+1}. ")
+	adv.desc  = get_desc(Rails.root.to_s + "/app/assets/images/old/u#{n+1}.html")
+	adv.image = load_image("u", n)
+	adv.map = load_image("umape", n)
 	adv.category = "Біл-борд"
 	adv.save
 end
 
-admin = User.new
-admin.name = "admin"
-admin.password = "password"
-admin.save

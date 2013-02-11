@@ -1,0 +1,6 @@
+AuthType	"Basic"
+AuthUserFile	"/var/www/rakris/.htpasswd"
+AuthName	"admin"
+Order		"Allow,Deny"
+Allow from	"All"
+Require valid-user
