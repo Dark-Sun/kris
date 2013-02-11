@@ -33,7 +33,7 @@ def get_desc(path)
 	end
 	desc
 end
-
+=begin
 114.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
@@ -46,4 +46,15 @@ end
 	adv.category = "Біл-борд"
 	adv.save
 end
-
+=end
+n=0
+adv = Advert.new
+	adv.name = "Щит N #{n+1}"
+	adv.city = "Ужгород"
+	adv.adress = get_adress(Rails.root.to_s + "/app/assets/images/old/u#{n+1}.html")
+	adv.adress.slice!("Щит №#{n+1}. ")
+	adv.desc  = get_desc(Rails.root.to_s + "/app/assets/images/old/u#{n+1}.html")
+	adv.image = load_image("u", n)
+	adv.map = load_image("umape", n)
+	adv.category = "Біл-борд"
+	adv.save
