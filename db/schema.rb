@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211213309) do
+ActiveRecord::Schema.define(:version => 20130211221021) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20130211213309) do
   end
 
   create_table "adverts", :force => true do |t|
-    t.string   "name"
+    t.text     "name"
     t.string   "map_path"
     t.text     "desc"
     t.string   "category"
