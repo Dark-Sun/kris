@@ -34,11 +34,7 @@ def get_desc(path)
 	desc
 end
 
-31.times do |n|
-	if n < 31
-		n = 31
-	end
-
+113.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
 	adv.city = "Ужгород"
