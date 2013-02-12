@@ -47,6 +47,7 @@ end
 	adv.save
 end
 =end
+=begin
 4.times do |n|
 	if n == 0
 		n=77
@@ -62,7 +63,8 @@ end
 	adv.category = "Біл-борд"
 	adv.save
 end
-
+=end
+=begin
 3.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
@@ -88,7 +90,7 @@ end
 	adv.category = "Біл-борд"
 	adv.save
 end
-
+=end
 2.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
