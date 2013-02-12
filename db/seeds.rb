@@ -47,9 +47,9 @@ end
 	adv.save
 end
 =end
-5.times do |n|
+4.times do |n|
 	if n == 0
-		n=76
+		n=77
 	end
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
