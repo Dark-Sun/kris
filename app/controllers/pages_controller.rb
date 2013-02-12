@@ -8,6 +8,7 @@ class PagesController < ApplicationController
 			article.body = article.body[0,170]
 		end
 		
+		@xls = AdressXls.last if AdressXls.last
 	end
 
 	def services

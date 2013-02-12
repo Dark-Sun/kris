@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AdvertChangeColumn1 < ActiveRecord::Migration
   def up
   	change_column :adverts, :name, :text, :limit => nil

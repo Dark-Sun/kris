@@ -1,0 +1,9 @@
+<div id="content">
+	<%= form_for @xls, :html => { :multipart => true } do |f| %>
+	<p>
+		Файл адресної програми: <%= f.file_field :file %>
+		<%= f.submit "Завантажити" %>
+		<%= link_to "Видалати", xls_destroy_path %>
+	</p>
+	<% end %>
+</div>

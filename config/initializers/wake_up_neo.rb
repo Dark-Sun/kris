@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 WakeUpNeo.configure do |config|
   # Url what will touch
   # For example 'http://myapp.heroku.com'

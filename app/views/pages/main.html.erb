@@ -4,7 +4,7 @@
 			<div>
 				<h4>Біл-борди</h4>
 				<p>Рекламний щит євростандарту <br>(розмір 3х6 м.) <br>	
-					Вигідне розташування на основних <br>магістралях, в центральнтх частинах міста.<br>
+					Вигідне розташування на основних <br>магістралях, в центральних частинах міста.<br>
 					<a href="/adverts?category=Біл-борд">Адресна програма</a> <br>
 					<a href="/services#bill-boards">Читати далі</a></p>	<br>
 			</div>
@@ -57,7 +57,7 @@
 			<br>
 			Пропонуємо Вам розглянути наступні пропозиції по розміщенню
 			Вашої реклами: <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Білборди", "services/#bill-boards",
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Біл-борди", "services/#bill-boards",
 										:style => "color:#2429a9;" %><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Сіті-лайти", "services/#citylight",
 										:style => "color:#2429a9;" %><br>
@@ -73,7 +73,7 @@
 										:style => "color:#2429a9;" %> <br>
 			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Буклети", "services/#buk",
 										:style => "color:#2429a9;" %> <br>
-			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Флаєра",  "services/#fla",
+			&nbsp;&nbsp;&nbsp;&nbsp;> <%= link_to "Флаєри",  "services/#fla",
 										:style => "color:#2429a9;" %> <br>
 		</div>
 
@@ -96,7 +96,8 @@
 			<br>
 			<div style="font-size: 18px; font-family: scadabold, Helvetica; text-align: center; width: 246px; color:black"> <%= link_to "Адресні програми", '/adverts', :class => 'categorylink' %> </div>
 		<%= link_to image_tag("billboard.png"), "/adverts?category=Біл-борд" %>
-		<%= link_to image_tag("citylight.png"), "/adverts?category=Сіті-лайт" %>
+		<%= link_to image_tag("citylight.png"), "/adverts?category=Сіті-лайт" %><br>
+		<%= link_to "Адресна програма в форматі excel", @xls.url if @xls %>
 
 		<div class="adress_caption">
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a href="/adverts?category=Біл-борд" >Біл-борди</a>&nbsp;&nbsp;&nbsp;&nbsp;
