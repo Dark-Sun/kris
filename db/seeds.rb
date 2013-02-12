@@ -87,7 +87,6 @@ end
 end
 
 2.times do |n|
-	7.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
 	adv.city = "Свалява"
@@ -101,7 +100,6 @@ end
 end
 
 5.times do |n|
-	7.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
 	adv.city = "Іршава"
@@ -115,7 +113,6 @@ end
 end
 
 2.times do |n|
-	7.times do |n|
 	adv = Advert.new
 	adv.name = "Щит N #{n+1}"
 	adv.city = "Нижні ворота"
