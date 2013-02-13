@@ -2,7 +2,7 @@
 class Feedback < ActionMailer::Base
 
   default from: "feedback@ra-kris.com"
-  default to:   "darksundarksun@gmail.com"
+  default to:   "kris@ra-kris.com"
 
   def feedback_email(message)
   	@message = message
