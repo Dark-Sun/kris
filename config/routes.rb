@@ -12,7 +12,7 @@ Kris::Application.routes.draw do
 
   resources :adverts, :users, :admins, :sessions, :portfolios
   resources :articles
-  resources :adress_xlss
+  resources :attachments
 
   #post "aaa" => 'pages#main', :as => "adress_xls_index", :action => "xls_create"
 

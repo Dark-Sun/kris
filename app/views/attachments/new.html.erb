@@ -1,0 +1,6 @@
+<div id="content">
+	<%= form_for @file, :html => { :multipart => true } do |f| %>
+		Файл:<br> <%= f.file_field :file %><br>
+		<br> <%= f.submit "Завантажити" %>
+	<% end %>
+</div>

@@ -7,8 +7,7 @@ class PagesController < ApplicationController
 		@articles.each do |article|
 			article.body = article.body[0,170]
 		end
-		
-		@xls = AdressXls.last if AdressXls.last
+		@file = Attachment.last
 	end
 
 	def services

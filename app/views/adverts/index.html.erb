@@ -5,23 +5,23 @@
 	<div style="border: 1px solid grey;padding: 5px;">
 	<ul>
 	<li class=<%= "active" if params[:city] == nil %>> <%= link_to "Всі міста", 
-			 request.parameters.merge({:city => nil}) %> </li>
+			 request.parameters.merge({:city => nil, :page => 1}) %> </li>
 	<li class=<%= "active" if params[:city] == "Ужгород" %>> <%= link_to "Ужгород", 
-		     request.parameters.merge({:city => "Ужгород"}) %> </li>
+		     request.parameters.merge({:city => "Ужгород", :page => 1}) %> </li>
 	<li class=<%= "active" if params[:city] == "Мукачево" %>> <%= link_to "Мукачево", 
-			 request.parameters.merge({:city => "Мукачево"}) %> </li>
+			 request.parameters.merge({:city => "Мукачево", :page => 1}) %> </li>
 	<li class=<%= "active" if params[:city] == "Берегово" %>> <%= link_to "Берегово", 
-		     request.parameters.merge({:city => "Берегово"}) %> </li>
+		     request.parameters.merge({:city => "Берегово", :page => 1}) %> </li>
 	<li class=<%= "active" if params[:city] == "Чоп" %>> <%= link_to "Чоп", 
-		     request.parameters.merge({:city => "Чоп"}) %> </li>
+		     request.parameters.merge({:city => "Чоп", :page => 1}) %> </li>
 	<li class=<%= "active" if params[:city] == "Свалява" %>> <%= link_to "Свалява", 
-		     request.parameters.merge({:city => "Свалява"}) %> </li>
+		     request.parameters.merge({:city => "Свалява", :page => 1}) %> </li>
 	<li class=<%= "active" if params[:city] == "Іршава" %>> <%= link_to "Іршава", 
-		     request.parameters.merge({:city => "Іршава"}) %> </li>	  
+		     request.parameters.merge({:city => "Іршава", :page => 1}) %> </li>	  
 	<li class=<%= "active" if params[:city] == "Нижні ворота" %>> <%= link_to "Нижні ворота", 
-		     request.parameters.merge({:city => "Нижні ворота"}) %> </li>   
+		     request.parameters.merge({:city => "Нижні ворота", :page => 1}) %> </li>   
 	<li class=<%= "active" if params[:city] == "Інше" %>> <%= link_to "Інше", 
-		     request.parameters.merge({:city => "Інше"}) %> </li>     
+		     request.parameters.merge({:city => "Інше", :page => 1}) %> </li>     
 	</ul>
 	</div>
 	<br>
@@ -29,15 +29,15 @@
 	<div style="border: 1px solid grey;padding: 5px;">
 	<ul>
 	<li class=<%= "active" if params[:category] == nil %>> <%= link_to "Всі типи", 
-			 request.parameters.merge({:category => nil}) %> </li>
+			 request.parameters.merge({:category => nil, :page => 1}) %> </li>
 	<li class=<%= "active" if params[:category] == "Біл-борд" %>> <%= link_to "Біл-борди", 
-			 request.parameters.merge({:category => "Біл-борд"}) %> </li>
+			 request.parameters.merge({:category => "Біл-борд", :page => 1}) %> </li>
 	<li class=<%= "active" if params[:category] == "Сіті-лайт" %>> <%= link_to "Сіті-лайти", 
-			 request.parameters.merge({:category => "Сіті-лайт"})%> </li>
+			 request.parameters.merge({:category => "Сіті-лайт", :page => 1})%> </li>
 	<li class=<%= "active" if params[:category] == "Касетон" %>> <%= link_to "Касетони", 
-			 request.parameters.merge({:category => "Касетон"})%> </li>
+			 request.parameters.merge({:category => "Касетон", :page => 1})%> </li>
 	<li class=<%= "active" if params[:category] == "Інша реклама" %>> <%= link_to "Інше", 
-			 request.parameters.merge({:category => "Інша реклама"})%> </li>		
+			 request.parameters.merge({:category => "Інша реклама", :page => 1})%> </li>		
 	</ul>
 	</div>
 </div>

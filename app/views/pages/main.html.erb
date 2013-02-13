@@ -97,12 +97,11 @@
 			<div style="font-size: 18px; font-family: scadabold, Helvetica; text-align: center; width: 246px; color:black"> <%= link_to "Адресні програми", '/adverts', :class => 'categorylink' %> </div>
 		<%= link_to image_tag("billboard.png"), "/adverts?category=Біл-борд" %>
 		<%= link_to image_tag("citylight.png"), "/adverts?category=Сіті-лайт" %><br>
-		<%= link_to "Адресна програма в форматі excel", @xls.url if @xls %>
-
 		<div class="adress_caption">
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a href="/adverts?category=Біл-борд" >Біл-борди</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;			<a href="/adverts?category=Сіті-лайт">Сіті-лайти</a>
 		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:14px; text-align:center"><%= link_to "Завантажити в форматі excel", @file.file.url if @file%></span>
 		</div>
 
 		
