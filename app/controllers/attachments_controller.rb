@@ -8,7 +8,7 @@ class AttachmentsController < ApplicationController
 	end
 	
 	def create
-		Attachment.last.destroy
+		Attachment.last.destroy if Attachment.last
 		@file = Attachment.new(params[:attachment])
 
 		respond_to do |format|
