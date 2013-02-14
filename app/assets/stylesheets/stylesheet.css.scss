@@ -73,7 +73,7 @@ img {border:none}
 
 
 h1 {
-	font: normal 60px Helvetica;
+	font: normal 60px scadaregular;
 	font-variant: small-caps;
 	color: #ee7d18;
 }
@@ -151,7 +151,7 @@ h3 {
 
 #services {
 	float: left;
-	width: 240px;
+	max-width: 240px;
 	font-size: 16px;
 	font-family:  Helvetica;
 	padding: 0 10px;
@@ -208,48 +208,25 @@ h3 {
 	text-decoration: underline;
 }
 
-#clients {
-	margin-top: -182px;
-	float:right;
-	width: 240px;
-	font-size: 16px;
-	font-family: Helvetica;
-	padding: 0 10px;
-	font-variant: normal;
-}
 
 #portfolio {
-	margin-left: 260px;
-	margin-top: -182px;
-	float:left;
+	
 	width: 240px;
 	font-size: 16px;
 	font-family:  Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
+	margin-left: 240px;
 }
 
-/* хак для оперы */
 
-noindex:-o-prefocus,#portfolio {
-	margin-left: 260px; 
-/*	margin-top: 26px;*/
-	left: 0px;
-	float: left;
-}
 /* opera 12 only */
 @media (min-resolution: .001dpcm) {
     _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
-        margin-left: 0px;
-        margin-top: 20px;
-        left: 0px;
     };
 }
 
-/* opera 11
-@media not screen and (1) {
-	#portfolio {margin-left: 260px;}
-}
+
 
 /* хак для хрома */
 body:nth-of-type(1) #port1{

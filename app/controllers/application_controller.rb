@@ -25,9 +25,9 @@ class ApplicationController < ActionController::Base
 					"Легше написати 10 правильних сонетів, ніж хорошу
 						рекламну об’яву"] 
 			@quote = @quotes[rand(7)]
-			if @quote.size < 70
+			if @quote.size < 73
 				@margin = "-118"
-			elsif @quote.size >= 70
+			elsif @quote.size >= 73
 				@margin = "-125"
 			end
 		end
