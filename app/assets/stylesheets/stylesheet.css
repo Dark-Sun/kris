@@ -30,8 +30,8 @@
 body { 
 	background-color: #c0c0c0;	
 	background-image: url(bg.jpg) ;
-	font-family: 'scadaregular ', sans-serif;
-	font: normal 20px 'scadaregular';
+	font-family: Helvetica;
+	font: normal 20px Helvetica;
 	font-variant: small-caps;
 	font-weight: normal;
 	word-wrap: break-word;
@@ -51,7 +51,7 @@ img {border:none}
 	margin: 0px 80px;
 	height: 79px;
 	border-bottom: 5px solid #2e34d6;
-	font-family: scadaregular, Helvetica;
+	font-family: 'scada', Helvetica;
     overflow: hidden;
 }
 
@@ -73,13 +73,13 @@ img {border:none}
 
 
 h1 {
-	font: normal 60px scadaregular, Helvetica;
+	font: normal 60px scadaregular;
 	font-variant: small-caps;
 	color: #ee7d18;
 }
 
 h3 {
-	font: normal 60px scadaregular, Helvetica;
+	font: normal 60px Helvetica;
 	font-variant: small-caps;
 	margin-top: -55px;
 	margin-left: 3px;
@@ -107,7 +107,7 @@ h3 {
 .carousel_text {
 	position: relative;
 	top: 0px;
-	left: 655px;
+	left: 650px;
 	color: white;
 	font-size: 48px;
 	z-index: -1;
@@ -121,6 +121,7 @@ h3 {
 .carousel_links {
 	text-align: right;
 	font-size: 16px;
+	margin-right:10px;
 }
 
 
@@ -143,26 +144,34 @@ h3 {
 	float: left;
 	width: 240px;
 	font-size: 16px;
-    font-family: 'scadaregular', Helvetica;
+    font-family:  Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
 }
 
 #services {
 	float: left;
-	width: 240px;
+	max-width: 240px;
 	font-size: 16px;
-	font-family: scadaregular, Helvetica;
+	font-family:  Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
 	color: #2429a9;
+}
+
+#services a {
+	text-decoration: none;
+}
+
+#services a:hover {
+	text-decoration: underline;
 }
 
 #news {
 	float: right;
 	width: 240px;
 	font-size: 16px;
-	font-family: scadaregular, Helvetica;
+	font-family:  Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
 	color: #2429a9;
@@ -181,7 +190,7 @@ h3 {
 #adresses {
 	width: 240px;
 	font-size: 16px;
-	font-family: scadaregular;
+	font-family: Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
 	text-align: center;
@@ -199,32 +208,37 @@ h3 {
 	text-decoration: underline;
 }
 
-#clients {
-	margin-top: -182px;
-	float:right;
-	width: 240px;
-	font-size: 16px;
-	font-family: scadaregular, Helvetica;
-	padding: 0 10px;
-	font-variant: normal;
-}
 
 #portfolio {
-	margin-left: 260px;
-	margin-top: -182px;
-	float:left;
+	
 	width: 240px;
 	font-size: 16px;
-	font-family: scadaregular, Helvetica;
+	font-family:  Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
+	margin-left: 240px;
 }
+
+
+/* opera 12 only */
+@media (min-resolution: .001dpcm) {
+    _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
+    };
+}
+
+
+
+/* хак для хрома */
+body:nth-of-type(1) #port1{
+	padding-left: -5px;
+}
+
 #footer {
 	height: 100px;
 	background-color: #2429a9;
 	border-top: 5px solid #2e34d6;
 	font-size: 20px;
-	font-family: scadaregular, Helvetica;
+	font-family:  Helvetica;
 	font-variant: normal;
 }
 
@@ -258,14 +272,20 @@ h3 {
 }
 
 #quote {
-	font-size: 14px;
+	font-size: 13px;
 	float: right;
 	height: 40px;
-	width: 395px;
+	work-break: break-all;
+	max-width: 400px;
+	min-width:200px;
 	border: 5px solid #d3d3d3;
 	color: #acacac;
-	font-family: scadaregular, Helvetica;
+	font-family:  Helvetica;
+	text-align:center;
+	padding: 0 10px;
 }
+
+
 
 #phone {
 	padding-top: 5px;
@@ -273,7 +293,7 @@ h3 {
 	float: right;
 	height: 35px;
 	font-size: 18px;
-    font-family: scadaregular, Helvetica;
+    font-family:  Helvetica;
 	font-variant: small-caps;
 }
 
@@ -348,10 +368,10 @@ h3 {
 }
 
 .slide div {
-    font-family: 'scadaregular', Helvetica;
+    font-family:  Helvetica;
     position: absolute;
     margin-top: -280px;
-    margin-left: 630px;
+    margin-left: 615px;
     color:white;
     word-wrap: break-word;
     font-variant: normal;
@@ -510,28 +530,6 @@ h3 {
     };
 }
 
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, #clients { /* стиль только для Opera 12.00+ */
-        position: absolute;
-        margin-top: 25px;
-        left: 470px;
-    };
-}
-
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
-        position: absolute;
-        margin-top: 25px;
-        left: 470px;
-    };
-}
-
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, .quote { /* стиль только для Opera 12.00+ */
-        padding-top: -25px;
-    };
-}
-
 .gallerey {
 	display: inline-block;
 }
@@ -576,4 +574,21 @@ h3 {
 
 .text img {
 	float: center;
+}
+
+.flash-error {
+	font-family: Helvetica;
+	font-size: 14px;
+	background-color: #fdf9b3;
+	border: 1px solid #f6ed5d;
+}
+
+.flash-notice {
+	font-family: Helvetica;
+	font-size: 14px;
+	background-color: #fdf9b3;
+	border: 2px solid #f6ed5d;
+	margin: 10px auto;
+	padding: 5px;
+	color: #4b4a3d;
 }
