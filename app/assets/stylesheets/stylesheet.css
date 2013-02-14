@@ -199,7 +199,6 @@ h3 {
 
 .adress_caption {
 	margin: 0px 10px;
-	float:center;
     text-align: center;
 }
 
@@ -210,27 +209,12 @@ h3 {
 
 
 #portfolio {
-	
 	width: 240px;
 	font-size: 16px;
 	font-family:  Helvetica;
 	padding: 0 10px;
 	font-variant: normal;
 	margin-left: 240px;
-}
-
-
-/* opera 12 only */
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, #portfolio { /* стиль только для Opera 12.00+ */
-    };
-}
-
-
-
-/* хак для хрома */
-body:nth-of-type(1) #port1{
-	padding-left: -5px;
 }
 
 #footer {
@@ -523,12 +507,7 @@ body:nth-of-type(1) #port1{
     color: #2429a9;
 }
 
-@media (min-resolution: .001dpcm) {
-    _:-o-prefocus, #adresses { /* стиль только для Opera 12.00+ */
-        position: absolute;
-        margin-top: 5px;
-    };
-}
+
 
 .gallerey {
 	display: inline-block;
@@ -572,9 +551,6 @@ body:nth-of-type(1) #port1{
 	font-size: 14px;
 }
 
-.text img {
-	float: center;
-}
 
 .flash-error {
 	font-family: Helvetica;
@@ -592,3 +568,4 @@ body:nth-of-type(1) #port1{
 	padding: 5px;
 	color: #4b4a3d;
 }
+#sss
