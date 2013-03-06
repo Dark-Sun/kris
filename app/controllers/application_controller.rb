@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 		end
 
 		def get_random_quote
-			  @quotes = [ "Реклама - душа торгівлі",
+			  @quotes = [ "   Реклама - душа торгівлі   ",
 					"Про ідеали нації можна судити по її рекламі",
 					"Згортати рекламу, щоб зберегти гроші, це все одно,
 						що зупиняти годинник, щоб зберегти час",
@@ -25,9 +25,9 @@ class ApplicationController < ActionController::Base
 					"Легше написати 10 правильних сонетів, ніж хорошу
 						рекламну об’яву"] 
 			@quote = @quotes[rand(7)]
-			if @quote.size < 73
+			if @quote.size < 75
 				@margin = "-118"
-			elsif @quote.size >= 73
+			elsif @quote.size >= 75
 				@margin = "-125"
 			end
 		end

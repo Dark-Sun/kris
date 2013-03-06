@@ -58,9 +58,4 @@ class PortfoliosController < ApplicationController
 
 	
 
-	private
-
-		def current_user
-			false
-		end 
 end
